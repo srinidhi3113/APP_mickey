@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--this makes us to add emojis-->
+    <title>DAILY TRACKER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!--div is the thing which we A big box holding everything-->
+
+    <!-- LEFT: TODO LIST -->
+    <section class="todo-section">
+        <!--creating a section for todo list inputs-->
+        <h2>Todo List</h2>
+
+        <div class="todo-input">
+            <input type="text" placeholder="Add a task..." />
+            <select>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select>
+            <button>Add</button>
+        </div>
+
+        <ul class="todo-list">
+            <li class="high">Finish Java Project</li>
+            <li class="medium">Workout</li>
+            <li class="low">Read Book</li>
+        </ul>
+    </section>
+
+    <!-- HABIT + CALENDAR -->
+    <section class="right-section">
+
+        <!-- CALENDAR -->
+        <div class="calendar-box">
+            <h2>Calendar</h2>
+            <div class="calendar-grid">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+                <span>Thu</span><span>Fri</span><span>Sat</span>
+
+                <!-- Days -->
+                <div class="day">1</div><div class="day">2</div><div class="day">3</div>
+                <div class="day">4</div><div class="day">5</div><div class="day">6</div>
+                <div class="day">7</div><div class="day">8</div><div class="day">9</div>
+            </div>
+        </div>
+
+        <!-- HABIT TRACKER -->
+        <div class="habit-box">
+            <h2>Habit Tracker (Monthly)</h2>
+
+            <div class="habit-row">
+                <span>Workout</span>
+                <div class="habit-days">
+                    <span class="done"></span>
+                    <span class="done"></span>
+                    <span></span>
+                    <span></span>
+                    <span class="done"></span>
+                </div>
+            </div>
+
+            <div class="habit-row">
+                <span>Study</span>
+                <div class="habit-days">
+                    <span class="done"></span>
+                    <span></span>
+                    <span class="done"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRAPH -->
+        <div class="graph-box">
+            <h2>Habit Progress</h2>
+            <div class="bar-graph">
+                <div class="bar" style="height:70%"></div>
+                <div class="bar" style="height:40%"></div>
+                <div class="bar" style="height:90%"></div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
