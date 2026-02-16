@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #7aade0;
+    padding: 20px;
+}
+
+.app-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* TODO SECTION */
+.todo-section {
+    width: 30%;
+    background: rgb(217, 152, 152);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.todo-input {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.todo-input input,
+.todo-input select {
+    padding: 6px;
+    flex: 1;
+}
+
+.todo-input button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.todo-list li {
+    list-style: none;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 6px;
+    color: rgb(242, 180, 215);
+}
+
+.high { background: #e74c3c; }
+.medium { background: #f39c12; }
+.low { background: #2ecc71; }
+
+/* RIGHT SECTION */
+.right-section {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* CALENDAR */
+.calendar-box {
+    background: rgb(247, 250, 163);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.calendar-grid span {
+    font-weight: bold;
+}
+
+.day {
+    padding: 8px;
+    background: #ecf0f1;
+    border-radius: 5px;
+}
+
+/* HABIT TRACKER */
+.habit-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.habit-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.habit-days span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 2px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.habit-days .done {
+    background: #27ae60;
+}
+
+/* GRAPH */
+.graph-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    grid-column: span 2;
+}
+
+.bar-graph {
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.bar {
+    width: 30px;
+    background: #3498db;
+    border-radius: 5px 5px 0 0;
+}
