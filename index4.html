@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Productivity Tracker</title>
+<link rel="stylesheet" href="style4.css">
+</head>
+
+<body><center>
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<h1>Daily Productivity Tracker</h1>
+<h5>Organize your tasks, habits, and progress in one place</h5>
+<h3>Welcome to your productivity hub!</h3>
+<h2><i>"You don't have to be great to start, but you have to start to be great." — Zig Ziglar </i></h2>
+</center>
+<div class="app">
+
+    <!-- TASKS -->
+    <div class="tasks">
+        <h2 id="selectedDate">Select a date</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <input type="time" id="timeInput">
+        <select id="categorySelect">
+            <option value="">No Category</option>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="health">Health</option>
+            <option value="learning">Learning</option>
+            <option value="finance">Finance</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+
+        <div class="filter-btns">
+            <button class="filter-btn" onclick="filterTasks('')">All</button>
+            <button class="filter-btn" onclick="filterTasks('work')">Work</button>
+            <button class="filter-btn" onclick="filterTasks('personal')">Personal</button>
+            <button class="filter-btn" onclick="filterTasks('health')">Health</button>
+            <button class="filter-btn" onclick="filterTasks('learning')">Learning</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- CALENDAR -->
+   <div class="calendar">
+    <div class="calendar-header">
+        <button onclick="prevMonth()">⬅</button>
+        <h2 id="monthYear"></h2>
+        <button onclick="nextMonth()">➡</button>
+    </div>
+
+    <div class="calendar-grid" id="calendar"></div>
+</div>
+
+
+    <!-- HABITS -->
+    <div class="habits">
+        <h2>Habits</h2>
+        <input type="text" id="habitInput" placeholder="Enter habit">
+        <button onclick="addHabit()">Add Habit</button>
+
+        <ul id="habitList"></ul>
+    </div>
+
+    <!-- TRACKER -->
+    <div class="tracker">
+        <h2>Habit Tracker</h2>
+        <div id="trackerGrid"></div>
+    </div>
+
+    <!-- GRAPH -->
+    <div class="graph">
+        <h2>Progress Graph</h2>
+        <canvas id="habitChart"></canvas>
+    </div>
+
+    <!-- POMODORO -->
+    <div class="pomodoro">
+        <h2>Pomodoro Timer</h2>
+        <div id="pomoDisplay" style="font-size:48px;font-weight:bold;color:#ff0606;">25:00</div>
+        <button id="pomoBtn" onclick="startPomodoro()">Start</button>
+        <button onclick="resetPomodoro()">Reset</button>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <h2>Statistics</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-value" id="taskCompleted">0</div>
+                <div class="stat-label">Tasks Done</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="taskRate">0%</div>
+                <div class="stat-label">Completion</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="habitStreak">0</div>
+                <div class="stat-label">Best Streak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="habitRate">0%</div>
+                <div class="stat-label">Habit Rate</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script4.js"></script>
+
+</body>
+</html>
